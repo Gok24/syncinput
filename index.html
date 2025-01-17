@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="username" placeholder="Username">
+    <input type="text" name="email" placeholder="Email">
+    <input type="text" class="address" placeholder="Address">
+    <input type="text" id="phone" placeholder="Phone">
+
+    <script type="module">
+        import { setupFormDataStorage } from './sync.js';
+
+        // Initialize the form storage handling
+        setupFormDataStorage({
+            formSelector: 'input',    // Apply to all input fields
+            storageKey: 'formData',   // Store data under 'formData'
+            debounceDelay: 500        // 500ms debounce
+        });
+    </script>
+</body>
+</html>
